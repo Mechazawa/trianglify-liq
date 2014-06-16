@@ -1,5 +1,6 @@
 :[allow Math Object require eval d3 document jsdom XMLSerializer btoa colorbrewer]
 
+# module is a keyword. This should fix that for us
 mod = eval("typeof module !== 'undefined'?module:{};")
 if (mod.exports) {
     d3 = require("d3")
@@ -154,5 +155,5 @@ class Trianglify {
 }
 
 
-if (typeof mod !== "undefined" && mod.exports) 
+if (mod.exports) 
     mod.exports = Trianglify
