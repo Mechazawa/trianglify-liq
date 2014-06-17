@@ -11,8 +11,7 @@ if (mod.exports) {
 }
 
 class Trianglify {
-    initialize: (options) -> {
-        options = options or {}
+    initialize: (options = {}) -> {
         defaults = (opt, def) ->
             opt or def
 
